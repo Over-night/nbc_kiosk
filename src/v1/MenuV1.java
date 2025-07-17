@@ -17,4 +17,5 @@ public class MenuV1 implements Menu {
         System.out.println("4. Hamburger     | W 5.4 | 비프패티를 기반으로 야채가 들어간 기본버거");
         System.out.println("0. 종료      | 종료");
     }
+
 }

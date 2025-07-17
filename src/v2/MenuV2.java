@@ -1,7 +1,6 @@
 package v2;
 
 import interfaces.Menu;
-import interfaces.MenuItem;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
@@ -52,4 +51,5 @@ public class MenuV2 implements Menu {
             throw new IndexOutOfBoundsException("존재하지 않는 메뉴입니다.");
         }
     }
+
 }

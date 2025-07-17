@@ -8,7 +8,7 @@ public class KioskV1 implements Kiosk {
     private final InputManager<Integer> inputManager = new InputManagerV1();
     private final Menu menu = new MenuV1();
 
-    public void kioskRun() {
+    public void start() {
         while(true) {
             menu.printMenu();
 

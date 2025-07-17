@@ -2,8 +2,6 @@ package v2;
 
 import interfaces.InputManager;
 import interfaces.Kiosk;
-import interfaces.Menu;
-import interfaces.MenuItem;
 
 import java.util.InputMismatchException;
 
@@ -11,7 +9,7 @@ public class KioskV2 implements Kiosk {
     private final InputManager<Integer> inputManager = new InputManagerV2();
     private final MenuV2 menu = new MenuV2();
 
-    public void kioskRun() {
+    public void start() {
         Integer select = null;
         MenuItemV2 menuItem = null;
 
