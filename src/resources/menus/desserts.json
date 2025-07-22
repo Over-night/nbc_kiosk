@@ -1,0 +1,26 @@
+[
+  {
+    "id" : 3001,
+    "name": "FriedPotato",
+    "price": 3.9,
+    "description": "소금으로 간이 된 튀긴 감자"
+  },
+  {
+    "id" : 3002,
+    "name": "ChickenNugget",
+    "price": 4.5,
+    "description": "육즙이 살아있는 닭튀김"
+  },
+  {
+    "id" : 3003,
+    "name": "IceCream",
+    "price": 5.0,
+    "description": "상하목장의 우유를 사용한 우유 아이스크림"
+  },
+  {
+    "id" : 3004,
+    "name": "Shakes",
+    "price": 5.5,
+    "description": "커스텀이 가능한 밀크쉐이크"
+  }
+]

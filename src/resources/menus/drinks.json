@@ -1,0 +1,26 @@
+[
+  {
+    "id" : 2001,
+    "name": "Cola",
+    "price": 6.9,
+    "description": "탄산음료"
+  },
+  {
+    "id" : 2002,
+    "name": "Sprite",
+    "price": 8.9,
+    "description": "탄산음료"
+  },
+  {
+    "id" : 2003,
+    "name": "Fanta",
+    "price": 6.9,
+    "description": "탄산음료"
+  },
+  {
+    "id" : 2004,
+    "name": "Beer",
+    "price": 5.4,
+    "description": "알코올음료"
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "id" : 1001,
+    "name": "ShackBurger",
+    "price": 6.9,
+    "description": "토마토, 양상추, 쉑소스가 토핑된 치즈버거"
+  },
+  {
+    "id" : 1002,
+    "name": "SmokeShack",
+    "price": 8.9,
+    "description": "베이컨, 체리 페퍼에 쉑소스가 토핑된 치즈버거"
+  },
+  {
+    "id" : 1003,
+    "name": "Cheeseburger",
+    "price": 6.9,
+    "description": "포테이토 번과 비프패티, 치즈가 토핑된 치즈버거"
+  },
+  {
+    "id" : 1004,
+    "name": "Hamburger",
+    "price": 5.4,
+    "description": "비프패티를 기반으로 야채가 들어간 기본버거"
+  }
+]
