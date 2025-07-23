@@ -1,4 +1,4 @@
-package v6;
+package v7;
 
 import enums.MainOption;
 import interfaces.MenuItem;
@@ -11,14 +11,14 @@ Type
 3xxx    DESSERTS
 
  */
-public class MenuItemV6 implements MenuItem {
+public class MenuItemV7 implements MenuItem {
     private Long id;
     private MainOption type;
     private String name;
     private BigDecimal price;
     private String description;
 
-    MenuItemV6(Long id, String name, BigDecimal price, String description) {
+    MenuItemV7(Long id, String name, BigDecimal price, String description) {
         this.id = id;
         this.name = name;
         this.price = price;

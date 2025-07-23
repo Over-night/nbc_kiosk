@@ -5,11 +5,11 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-public class ShoopingCartV6 {
+public class ShoppingCartV6 {
     private final HashMap<Long, Integer> cart;
     private BigDecimal totalPrice;
 
-    ShoopingCartV6() {
+    ShoppingCartV6() {
         cart = new HashMap<>();
         totalPrice = BigDecimal.ZERO;
     }

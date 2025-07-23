@@ -11,7 +11,7 @@ import java.util.Scanner;
 public class KioskV6 implements Kiosk {
     private final Scanner sc;
     private final List<MenuV6> menus;
-    private final ShoopingCartV6 shoopingCart;
+    private final ShoppingCartV6 shoopingCart;
 
     private void addCategories() {
         menus.add(new MenuV6("BURGERS"));
@@ -36,7 +36,7 @@ public class KioskV6 implements Kiosk {
     public KioskV6() {
         sc = new Scanner(System.in);
         menus = new ArrayList<>();
-        shoopingCart = new ShoopingCartV6();
+        shoopingCart = new ShoppingCartV6();
 
         // 카테고리 & 메뉴 추가
         addCategories();
