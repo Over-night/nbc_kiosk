@@ -8,7 +8,6 @@ import java.util.Map;
 public class ShoppingCartV7 {
     private final Map<MenuItemV7, Integer> cart = new HashMap<>();;
     private final ArrayList<MenuItemV7> cartIndex = new ArrayList<>();;
-    private BigDecimal total_price = BigDecimal.ZERO;;
 
     public void addItemToCart(MenuItemV7 menuItem, int quantity) {
         if (cart.containsKey(menuItem)) {
@@ -18,8 +17,6 @@ public class ShoppingCartV7 {
             cart.put(menuItem, quantity);
             cartIndex.add(menuItem);
         }
-
-        total_price = total_price.add(menuItem.getPrice().multiply(BigDecimal.valueOf(quantity)));
     }
 
     public void cancelOrder(int index, int amount) {
@@ -31,14 +28,11 @@ public class ShoppingCartV7 {
         }
         else
             cart.put(item, cart.get(item) - amount);
-
-        total_price = total_price.subtract(item.getPrice().multiply(BigDecimal.valueOf(amount)));
     }
 
     public void clearCart(){
         cart.clear();
         cartIndex.clear();
-        total_price = BigDecimal.ZERO;
     }
 
     public void showCart() {
@@ -47,7 +41,7 @@ public class ShoppingCartV7 {
             System.out.printf("%2d개 | %s (%.1f)\n", cart.get(item), item.getName(), item.getPrice());
 
         System.out.println("\n< Total >");
-        System.out.println("W " + total_price);
+        System.out.println("W " + getTotalPrice());
 
         System.out.println("\n 1. 주문");
         System.out.println(" 0. 뒤로가기");
@@ -75,8 +69,14 @@ public class ShoppingCartV7 {
         return cart.getOrDefault(cartIndex.get(index), 0);
     }
 
-    public BigDecimal getTotalPrice(BigDecimal discountRate) {
-        return total_price.multiply(discountRate);
+    public BigDecimal getTotalPrice() {
+        return cart.entrySet().stream()
+                .map(item -> item.getKey().getPrice().multiply(BigDecimal.valueOf(item.getValue())))
+                .reduce(BigDecimal.ZERO, BigDecimal::add);
+    }
+
+    public BigDecimal getTotalPriceWithDiscount(BigDecimal discountRate) {
+        return getTotalPrice().multiply(discountRate);
     }
 
     public int getSize() {

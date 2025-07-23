@@ -233,7 +233,7 @@ public class KioskV7 implements Kiosk {
                             // 할인 적용 가능 시 적용
                             if(discountOption != DiscountOption.NORMAL)
                                 System.out.printf("[System] %d%% 할인이 적용되었습니다\n", BigDecimal.ONE.subtract(discountOption.getRate()).multiply(new BigDecimal(100)).toBigInteger());
-                            System.out.println("[System] 주문이 완료되었습니다. 총 금액은 W " + shoppingCart.getTotalPrice(discountOption.getRate()) + " 입니다\n");
+                            System.out.println("[System] 주문이 완료되었습니다. 총 금액은 W " + shoppingCart.getTotalPriceWithDiscount(discountOption.getRate()) + " 입니다\n");
 
                             shoppingCart.clearCart();
                         }
